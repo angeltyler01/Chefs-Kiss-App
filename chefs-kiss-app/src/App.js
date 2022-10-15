@@ -4,10 +4,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+
 function BasicExample() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
+      <Navbar sticky="top" />
         <Navbar.Brand href="#home">Chefs Kiss</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

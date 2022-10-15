@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/angeltyler01/Chefs-Kiss-App/issues"
   },
-  "homepage": "https://github.com/angeltyler01/Chefs-Kiss-App#readme"
+  "homepage": "https://github.com/angeltyler01/Chefs-Kiss-App#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
