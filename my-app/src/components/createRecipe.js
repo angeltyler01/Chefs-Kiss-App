@@ -1,11 +1,11 @@
-import Nav from './Nav'
+import Form from './Formcreate'
 
-function create() {
+function createRecipe() {
     return (
-        <div>
-            <Nav />
-            <p>create page </p>
+        <div className='create-Recipe-page'>
+            <h1>share your recipes!</h1>
+            <Form />
         </div>
     )
 }
-export default create;
+export default createRecipe;
