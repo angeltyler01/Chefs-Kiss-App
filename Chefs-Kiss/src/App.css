@@ -48,6 +48,7 @@
     margin: 0.5em;
 }
 
-.form-text-margin {
-  margin: 0.5em;
+.FormInputs {
+  width: 25em;
+  margin-bottom: 1em;
 }
