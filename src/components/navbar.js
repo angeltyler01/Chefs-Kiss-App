@@ -2,7 +2,10 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+
+
 
 
 function BasicExample() {
@@ -18,8 +21,6 @@ function BasicExample() {
             <Nav.Link href="#breakfast">Breakfast</Nav.Link>
             <Nav.Link href="#lunch">Lunch</Nav.Link>
             <Nav.Link href="#dinner">Dinner</Nav.Link>
-            <Nav.Link href="#dessert">Dessert</Nav.Link>
-            <Nav.Link href="#favorites">Favorites</Nav.Link>
             <NavDropdown title="More" id="basic-nav-dropdown">
             <NavDropdown.Item href="create">Create</NavDropdown.Item>
               <NavDropdown.Item href="about">About</NavDropdown.Item>
@@ -33,5 +34,7 @@ function BasicExample() {
     </Navbar>
   );
 }
+
+
 
 export default BasicExample;
