@@ -1,4 +1,4 @@
-import BasicExample from "../components/navbar";
+import BasicExample from "./navbar";
 
 function edit_form () {
     return (

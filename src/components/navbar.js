@@ -8,16 +8,16 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 
-function BasicExample () {
+function DefNav () {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
       <Navbar sticky="top" />
-        <Navbar.Brand href="./home">Chefs Kiss</Navbar.Brand>
+        <Navbar.Brand href="/">Chefs Kiss</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="./home">Home</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="#breakfast">Breakfast</Nav.Link>
             <Nav.Link href="#lunch">Lunch</Nav.Link>
             <Nav.Link href="#dinner">Dinner</Nav.Link>
@@ -37,4 +37,4 @@ function BasicExample () {
 
 
 
-export default BasicExample;
+export default DefNav;
