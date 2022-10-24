@@ -52,3 +52,22 @@
   width: 25em;
   margin-bottom: 1em;
 }
+
+.ShowPage {
+  border-style: solid;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+.ShowImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 40em;
+}
+
+.ShowComponent {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}

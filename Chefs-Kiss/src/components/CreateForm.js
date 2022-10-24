@@ -7,7 +7,7 @@ function CreateForm() {
       <label htmlFor="picture">Picture:</label>
       <input class="FormInputs" id="picture" name="picture" required />
 
-      <label for="meal">Meal of the day: idk if thats what its called</label>
+      <label for="meal">Dish Type</label>
       <select class="FormInputs" id="meal" name="meal">
         <option value="breakfast">Breakfast</option>
         <option value="lunch">Lunch</option>
