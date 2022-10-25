@@ -6,6 +6,7 @@ import axios from 'axios'
 
 
 
+
 function CreateRecipeForm() {
     const [input, setInput] = useState({
         name: "",
@@ -34,7 +35,6 @@ function CreateRecipeForm() {
               instructions: input.instructions,
               type: input.type,
         };
-        console.log(input);
         axios.post('http://localhost:5002/recipes/new', newRecipe) 
     }
 
@@ -57,8 +57,8 @@ function CreateRecipeForm() {
       <Form.Label > Recipe type</Form.Label>
         <input onChange={handleChange} name="type" value={input.type} className="form-control" placeholder='Required' />
       </div>
-      <a href='/recipes'>   
-      <Button onClick={handleClick}  variant="primary" type="submit">Submit</Button>
+      <a href='/'>   
+      <Button onClick={handleClick}  variant="primary" type="submit">submit</Button>
       </a>
             </Form>
         </div>

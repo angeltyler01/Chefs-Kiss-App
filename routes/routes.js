@@ -20,9 +20,6 @@ router.get('/recipes/:id', (req, res) => {
     })
 })
 
-router.delete('/recipes/:id', (req, res) => {
-    Recipe.findByIdAndDelete(req.params.id)
-})
 
 //
 
@@ -40,4 +37,8 @@ router.route("/recipes/new").post((req, res)=>{
     newRecipe.save();
 })
 
+router.delete('/recipes/:id', (req, res) => {
+    const deleteId = (req.params.id)
+    Recipe.findByIdAndDelete(deleteId).exec()
+})
     module.exports = router;
