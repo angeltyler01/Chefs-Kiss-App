@@ -1,12 +1,11 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
-import { useLocation, Link, json } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
 function ViewRecipe() {
-    const location = useLocation()
-    console.log(location)
+    const{ id } = useParams()
     const [recipe, setRecipe] = useState([{
         name: '',
         picture: '',
@@ -14,19 +13,23 @@ function ViewRecipe() {
         type: '',
     }]) 
     useEffect(() =>{
-        fetch(`http://localhost:5002/recipes/${location}`)
+        fetch(`http://localhost:5002/recipes/${id}`)
         .then(res => {
             return res.json();
     })
-    .then(recipe => {
-        setRecipe(recipe)
+    .then(recipeView => {
+        setRecipe(recipeView)  
     })
 }, [])
+
+
 
     
     return (
         <div className="Recipes-view-page">
-            <p>recipe view page</p>
+            <h1>{recipe.name}</h1>
+            <Button>Edit Recipe</Button>
+            <Button onClick={handleClick}>Delete Recipe</Button>
         </div>
     )
 }

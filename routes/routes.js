@@ -14,13 +14,14 @@ router.get('/recipes', (req, res) => {
 })
 
 router.get('/recipes/:id', (req, res) => {
-    const fetchid = (req.params.id)
-    Recipe.findOne(({id:fetchid}), function(err, recipe) {
-        if(err) {
-            console.log('err')
-        }
-        res.send(recipe)
+    Recipe.findById(req.params.id)
+    .then(FoundRecipe => {
+        res.json(FoundRecipe)
     })
+})
+
+router.delete('/recipes/:id', (req, res) => {
+    Recipe.findByIdAndDelete(req.params.id)
 })
 
 //
