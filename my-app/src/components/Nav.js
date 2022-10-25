@@ -13,8 +13,8 @@ function Navigation() {
           <Nav className="me-auto">
             <Nav.Link href="http://localhost:3000/">Home</Nav.Link>
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="http://localhost:3000/read">My Recipes</NavDropdown.Item>
-              <NavDropdown.Item href="http://localhost:3000/create"> Create a Recipe
+              <NavDropdown.Item href="http://localhost:3000/recipes">My Recipes</NavDropdown.Item>
+              <NavDropdown.Item href="http://localhost:3000/recipes/new"> Create a Recipe
               </NavDropdown.Item>
               <NavDropdown.Item href="http://localhost:3000/About">
                 About Us
