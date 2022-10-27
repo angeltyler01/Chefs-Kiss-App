@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import axios, { Axios } from 'axios'
+import axios from 'axios'
 import { Link, useParams } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
@@ -31,7 +31,8 @@ const deleteRecipe = (id) => {
     return (
         <div className="Recipes-view-page">
             <h1>{recipe.name}</h1>
-            <Button>Edit Recipe</Button>
+            <Link key={recipe._id} to={{pathname:`/recipes/${recipe._id}/edit`}}><Button>Edit Recipe</Button></Link>
+            
             <a href='/recipes'>
             <Button onClick={() => {deleteRecipe(id)}}>Delete Recipe</Button>
             </a>
