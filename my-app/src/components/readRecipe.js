@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
 function Read() {
     const [recipes, setRecipes] = useState([{
         name: '',
-        picture: '',
+        pic: '',
         instuctions: '',
         type: '',
     }])
@@ -26,11 +26,10 @@ function Read() {
     return (
         <div className="Recipes-view-page">
             {recipes.map(recipe =>
-            <div className="recipe-detail-block"  style={{'display': 'inline-block', 'width': '30vw'}}>
-                <h3>
-                <Link key={recipe._id} to={{pathname:`/recipes/${recipe._id}`}}>{recipe.name}</Link>
-                </h3>
-                <img key={recipe._id} src={recipe.picture} alt={recipe.name} className="recipe-pic"/>
+            <div className="recipe-detail-block" >
+                <h3 className="recipe-title-link"><Link key={recipe._id} to={{pathname:`/recipes/${recipe._id}`}}>{recipe.name}</Link></h3>
+                <img key={recipe._id} src={recipe.pic} alt={recipe.name} className="recipe-pic"/>
+                
             </div>
                 )}
         </div>

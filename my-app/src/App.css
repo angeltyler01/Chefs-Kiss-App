@@ -38,10 +38,34 @@
 }
 
 /* Recipe view page*/
+
 .Recipes-view-page {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
 
+/* individual recipe box*/
+
+.recipe-detail-block {
+  display: inline;
+  width: 30vw;
+}
+
+/* recipe title link */
+
+.recipe-title-link {
+  font-family: sans-serif;
+}
+
+/* recipe-img */
+
+.recipe-pic {
+max-width: 200px;
+max-height: 200px;
 }
 
 /* Recipe update page */

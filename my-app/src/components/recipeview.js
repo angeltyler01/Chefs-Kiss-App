@@ -32,9 +32,13 @@ const deleteRecipe = (id) => {
     
     return (
         <div className="Recipes-view-page">
+            <div className='recipe-view-details'>
             <h1>{recipe.name}</h1>
-            <Link key={recipe._id} to={{pathname:`/recipes/${recipe._id}/edit`}}><Button>Edit Recipe</Button></Link>
+            <img src={recipe.pic}></img>
+            <p className='recipe-view-instructions'>{recipe.instuctions}</p>
+            </div>
             
+            <Link key={recipe._id} to={{pathname:`/recipes/${recipe._id}/edit`}}><Button>Edit Recipe</Button></Link>
             <a href='/recipes'>
             <Button onClick={() => {deleteRecipe(id)}}>Delete Recipe</Button>
             </a>

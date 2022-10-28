@@ -53,15 +53,15 @@ function CreateRecipeForm() {
       </div>
       <div className="form-group" >
         <Form.Label > Recipe Picture</Form.Label>
-        <input onChange={handleChange} name="picture" value={input.picture} className="form-control" placeholder='Required' />
-      </div>
-      <div className="form-group" >
-      <Form.Label > Recipe instructions</Form.Label>
-        <input onChange={handleChange} name="instructions" value={input.instructions} className="form-control" placeholder='Required' />
+        <input onChange={handleChange} name="pic" value={input.picture} className="form-control" placeholder='Required' />
       </div>
       <div className="form-group" >
       <Form.Label > Recipe type</Form.Label>
         <input onChange={handleChange} name="type" value={input.type} className="form-control" placeholder='Required' />
+      </div>
+      <div className="form-group" >
+      <Form.Label > Recipe instructions</Form.Label>
+        <input onChange={handleChange} name="instructions" value={input.instructions} className="form-control" placeholder='Required' />
       </div>
       <a href='/'>   
       <Button onClick={handleClick}  variant="primary" type="submit">submit</Button>
