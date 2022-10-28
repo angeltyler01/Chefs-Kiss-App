@@ -1,8 +1,12 @@
-
+import React, { useState } from "react";
 function home() {
     return (
         <div>
-        <p>home page</p>
+            <h1>Home page</h1>
+        <a href="/recipes">
+            <button className="btn-primary"> View Recipes </button>
+        </a>
+
         </div>
 );
 }

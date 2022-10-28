@@ -6,6 +6,7 @@ import Createpage from './components/createRecipe'
 import Readpage from './components/readRecipe'
 import Updatepage from './components/updateRecipe'
 import Aboutpage from './components/About'
+import Recipeview from './components/recipeview'
 
 
 
@@ -18,13 +19,14 @@ function App() {
             <Route path='/' element={
                     <Homepage />
                 } />
-                <Route path='/create' element={
-                    <Createpage />
-                } />
-                <Route path='/read' element={
+                <Route path='/recipes' element={
                     <Readpage />
                 } />
-                <Route path='/update' element={
+                <Route path='/recipes/:id' element= {<Recipeview /> } />
+                <Route path='/recipes/new' element={
+                    <Createpage />
+                } />
+                <Route path='/recipes/:id/edit' element={
                     <Updatepage />
                 } />
                 <Route path='/about' element={

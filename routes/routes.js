@@ -1,15 +1,29 @@
-const { application } = require("express");
-const express = require("express");
+const router = require('express').Router()
 const Recipe = require("../models/recipeModel");
-const router = express.Router();
-const Recipes = require('../models/recipeModel')
 
-router.route("/read").get((req, res) => {
+
+router.get('/recipes', (req, res) => {
     Recipe.find()
-    .then(foundRecipe => res.json(foundRecipe))
-});
+    .then(FoundRecipe => {
+        res.json(FoundRecipe)
+        
+    })
+    .catch(err => {
+        console.log("err")
+    })
+})
 
-router.route("/create").post((req, res)=>{
+router.get('/recipes/:id', (req, res) => {
+    Recipe.findById(req.params.id)
+    .then(FoundRecipe => {
+        res.json(FoundRecipe)
+    })
+})
+
+
+//
+
+router.route("/recipes/new").post((req, res)=>{
     const name = req.body.name;
     const pic = req.body.picture;
     const instructions = req.body.instructions;
@@ -23,4 +37,24 @@ router.route("/create").post((req, res)=>{
     newRecipe.save();
 })
 
-module.exports = router;
+router.put('/recipes/:id/edit', (req, res) => {
+    const id = req.params.id;
+    const newName = req.body.name;
+    const newPic = req.body.pic;
+    const newInstructions = req.body.instructions;
+    const newType = req.body.type
+    Recipe.findById(id, (error, updateRecipe) =>{
+       updateRecipe.name = newName;
+       updateRecipe.pic = newPic;
+       updateRecipe.instructions = newInstructions;
+       updateRecipe.type = newType;
+        updateRecipe.save()
+    });
+    res.send('well done')
+}) 
+
+router.delete('/recipes/:id', (req, res) => {
+    const deleteId = (req.params.id)
+    Recipe.findByIdAndDelete(deleteId).exec()
+})
+    module.exports = router;
