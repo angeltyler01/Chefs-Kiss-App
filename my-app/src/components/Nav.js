@@ -7,13 +7,19 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 function Navigation() {
   return (
     <div className='nav-bar'>
-      <Navbar bg="dark" variant="dark">
+      <Navbar>
         <Container>
-          <Navbar.Brand href="http://localhost:3000/">Chef's kiss</Navbar.Brand>
+          <div className="brand-name">
+          <Navbar.Brand href="http://localhost:3000/">Chef's Kiss 💋</Navbar.Brand>
+          </div>
           <Nav className="me-auto">
+            <div className="home-button">
             <Nav.Link href="http://localhost:3000/">Home</Nav.Link>
+            </div>
+            <div className="my-recipes">
+              <Nav.Link href="http://localhost:3000/recipes">My Recipes</Nav.Link>
+            </div>
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="http://localhost:3000/recipes">My Recipes</NavDropdown.Item>
               <NavDropdown.Item href="http://localhost:3000/recipes/new"> Create a Recipe
               </NavDropdown.Item>
               <NavDropdown.Item href="http://localhost:3000/About">
