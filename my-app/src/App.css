@@ -113,26 +113,31 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 /* Recipe update page */
 
 .updateRecipe-container {
-  width: 100%;
-    min-height: 100vh;
-    display: block;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 960px;
-    padding: 15px;
-    background: silver;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: larger;
+  color: #f3ac83;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 5px solid;
+  margin: 50px;
 }
 
 .updaterecipe-title {
 display: inline-block;
 margin: 20px;
 }
+.update-hr {
+  border: 5px solid orange;
+  width: 100px;
+  margin: auto;
+  border-radius: 5px;
+}
 
 .update-form {
   width: 50%;
   margin-right: auto;
   margin-left: auto;
-  background-color: beige;
+  
 }
 /* update input name */
 .update-input-name {
