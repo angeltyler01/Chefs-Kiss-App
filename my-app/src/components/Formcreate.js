@@ -45,29 +45,33 @@ function CreateRecipeForm() {
     }
 
     return(
-        <div className='createForm'>
-            <Form>
-      <div className="form-group" >
-      <Form.Label > Recipe Name</Form.Label>
-        <input onChange={handleChange} name="name" value={input.name} className="form-control" placeholder='Required' />
+      <div className='createForm'>
+          <Form>
+    <div className="form-group" >
+    <Form.Label > Recipe Name</Form.Label>
+      <input onChange={handleChange} name="name" value={input.name} className="form-control" placeholder='Required' />
+    </div>
+  <div className="row">
+    <div className="form-group col-sm-6" >
+      <Form.Label > Recipe Picture</Form.Label>
+      <input onChange={handleChange} name="picture" value={input.picture} className="form-control" placeholder='Required' />
+    </div>
+    <div className="form-group col-sm-6" >
+    <Form.Label > Recipe Type</Form.Label>
+      <input onChange={handleChange} name="type" value={input.type} className="form-control" placeholder='Required' />
+    </div>
+  </div>
+    <div className="form-group" >
+    <Form.Label > Recipe Instructions</Form.Label>
+      <input onChange={handleChange} name="instructions" value={input.instructions} className="form-control" placeholder='Required' />
+    </div>
+    <div className="button">
+    <Button onClick={handleClick} variant="outline-warning" type="submit" size="lg">
+      Submit
+    </Button>
+    </div>
+          </Form>
       </div>
-      <div className="form-group" >
-        <Form.Label > Recipe Picture</Form.Label>
-        <input onChange={handleChange} name="pic" value={input.picture} className="form-control" placeholder='Required' />
-      </div>
-      <div className="form-group" >
-      <Form.Label > Recipe type</Form.Label>
-        <input onChange={handleChange} name="type" value={input.type} className="form-control" placeholder='Required' />
-      </div>
-      <div className="form-group" >
-      <Form.Label > Recipe instructions</Form.Label>
-        <input onChange={handleChange} name="instructions" value={input.instructions} className="form-control" placeholder='Required' />
-      </div>
-      <a href='/'>   
-      <Button onClick={handleClick}  variant="primary" type="submit">submit</Button>
-      </a>
-            </Form>
-        </div>
-    )
+  )
 }
 export default CreateRecipeForm;
