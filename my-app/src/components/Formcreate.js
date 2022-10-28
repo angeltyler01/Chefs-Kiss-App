@@ -3,11 +3,13 @@ import Form from 'react-bootstrap/Form';
 import React from 'react';
 import { useState } from 'react';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 function CreateRecipeForm() {
+  const navigate = useNavigate();
     const [input, setInput] = useState({
         name: "",
         picture: "",
@@ -26,6 +28,9 @@ function CreateRecipeForm() {
             }
         }) 
     }
+    const navigateBack = () => {
+      navigate('/recipes')
+    }
 
     function handleClick(event) {
         event.preventDefault();
@@ -35,7 +40,8 @@ function CreateRecipeForm() {
               instructions: input.instructions,
               type: input.type,
         };
-        axios.post('http://localhost:5002/recipes/new', newRecipe) 
+        axios.post('http://localhost:5002/recipes/new', newRecipe)
+        navigateBack() 
     }
 
     return(

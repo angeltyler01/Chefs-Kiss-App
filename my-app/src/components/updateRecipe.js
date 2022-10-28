@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios'
 
 function Update() {
-    const{ id } = useParams()
+    const{ id } = useParams();
+    const navigate = useNavigate();
 
     const [recipe, setRecipe] = useState([{
         name: '',
@@ -23,6 +24,10 @@ function Update() {
         setRecipe(recipeView)  
     })
 }, [])
+
+const navigateBack = () => {
+  navigate(-1)
+}
 
     function handleChange(event) {
         const {name, value} = event.target;
@@ -44,6 +49,7 @@ function Update() {
         };
         
         axios.put(`http://localhost:5002/recipes/${id}/edit`, updatedRecipe) 
+        navigateBack()
     }
 
 
@@ -69,9 +75,7 @@ function Update() {
         <input onChange={handleChange} name="type" value={recipe.type} className="form-control" placeholder='Required' />
       </div>
             </Form>
-      <Link to="/recipes">
       <Button onClick={handleClick} variant="primary" type="submit">submit</Button>
-      </Link>
         </div>
     );
 }

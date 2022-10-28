@@ -1,11 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
 function ViewRecipe() {
-    const{ id } = useParams()
+    const{ id } = useParams();
+    const navigate = useNavigate();
     const [recipe, setRecipe] = useState([{
         name: '',
         picture: '',
@@ -22,6 +23,7 @@ function ViewRecipe() {
     })
 }, [])
 
+
 const deleteRecipe = (id) => {
     axios.delete(`http://localhost:5002/recipes/${id}`)
 }
@@ -36,6 +38,7 @@ const deleteRecipe = (id) => {
             <a href='/recipes'>
             <Button onClick={() => {deleteRecipe(id)}}>Delete Recipe</Button>
             </a>
+            <Button onClick={() => navigate(-1)}>Go Back</Button>
         </div>
     )
 }
