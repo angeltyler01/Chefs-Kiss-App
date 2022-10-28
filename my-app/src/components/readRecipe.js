@@ -26,10 +26,10 @@ function Read() {
     return (
         <div className="Recipes-view-page">
             {recipes.map(recipe =>
-            <div className="recipe-details"  style={{'display': 'inline-block', 'width': '30vw'}}>
-                <h2>
+            <div className="recipe-detail-block"  style={{'display': 'inline-block', 'width': '30vw'}}>
+                <h3>
                 <Link key={recipe._id} to={{pathname:`/recipes/${recipe._id}`}}>{recipe.name}</Link>
-          </h2>
+                </h3>
                 <img key={recipe._id} src={recipe.picture} alt={recipe.name} className="recipe-pic"/>
             </div>
                 )}
