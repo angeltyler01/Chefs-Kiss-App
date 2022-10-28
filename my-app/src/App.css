@@ -37,9 +37,105 @@
   }
 }
 
-
+/* Recipe view page*/
 .Recipes-view-page {
   display: flex;
   flex-direction: row;
 
 }
+
+/* Recipe update page */
+
+.updateRecipe-container {
+  width: 100%;
+    min-height: 100vh;
+    display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 960px;
+    padding: 15px;
+    background: silver;
+}
+
+.updaterecipe-title {
+display: inline-block;
+margin: 20px;
+}
+
+.update-form {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: beige;
+}
+/* update input name */
+.update-input-name {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 0;
+  padding: 10px 30px 9px 22px;
+  margin-bottom: 20px;
+}
+
+.update-input-title {
+  font-family: sans-serif;
+    font-size: 10px;
+    color: #393939;
+    line-height: 2;
+    text-transform: uppercase;
+}
+
+.input-name {
+  display: block;
+    width: 100%;
+    background: 0 0;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: black;
+    line-height: 1.75;
+    border-color: black;
+    border-radius: 13px;
+}
+
+/* update input picture */
+
+.update-input-pic {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 0;
+  padding: 10px 30px 9px 22px;
+  margin-bottom: 20px;
+}
+
+/* update inpute type */
+
+.update-input-type {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 0;
+  padding: 10px 30px 9px 22px;
+  margin-bottom: 20px;
+}
+/* update input instuction */
+
+.update-input-instructions {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 0;
+  padding: 10px 30px 9px 22px;
+  margin-bottom: 20px;
+}
+
+/* update submit button */
+
+.submit-form-button {
+  background: #B9DFFF;
+color: #fff;
+border: 1px solid #eee;
+border-radius: 20px;
+box-shadow: 5px 5px 5px #eee;
+text-shadow: none;
+margin-bottom: 20px;
+}
+
+
