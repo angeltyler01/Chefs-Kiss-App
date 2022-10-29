@@ -273,3 +273,21 @@ border-radius: 10px;
 .button{
   margin: 36px;
 }
+
+/* about page  */
+
+.about-container {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: larger;
+  color: #f3ac83;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 5px solid;
+  margin: 50px;
+}
+
+.about-discription {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
