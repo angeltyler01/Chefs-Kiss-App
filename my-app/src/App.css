@@ -239,7 +239,9 @@ border-radius: 10px;
 
 /* Home page */
 
-
+.home-page{
+ 
+}
 
 /* Create Page */
 
@@ -262,14 +264,12 @@ border-radius: 10px;
 }
 
 .horizontal-line{
-  border: 5px solid orange;
-  width: 100px;
+  border: 5px solid #F1CA7B;
+  width: 1200px;
   margin: auto;
   border-radius: 5px;
 }
 
 .button{
-  margin: 36px; 
+  margin: 36px;
 }
-
-
