@@ -26,19 +26,17 @@ function ViewRecipe() {
 
 const deleteRecipe = (id) => {
     axios.delete(`http://localhost:5002/recipes/${id}`)
-}
-
-
-    
+}    
     return (
-        <div className="Recipes-view-page">
-            <h1>{recipe.name}</h1>
-            <Link key={recipe._id} to={{pathname:`/recipes/${recipe._id}/edit`}}><Button>Edit Recipe</Button></Link>
-            
-            <a href='/recipes'>
-            <Button onClick={() => {deleteRecipe(id)}}>Delete Recipe</Button>
-            </a>
-            <Button onClick={() => navigate(-1)}>Go Back</Button>
+        <div className="Recipe-view-page">
+            <div className='recipe-view-details'>
+            <h1 className='recipe-view-name'>{recipe.name}</h1>
+            <img className='recipe-view-img' src={recipe.pic}></img>
+            <p className='recipe-view-instructions'>{recipe.instructions}</p>
+            </div>
+            <Link key={recipe._id} to={{pathname:`/recipes/${recipe._id}/edit`}}><Button variant="outline-warning" className='recipe-view-button'>Edit Recipe</Button></Link>
+            <a href='/recipes'><Button variant="outline-warning" className='recipe-view-button' onClick={() => {deleteRecipe(id)}}>Delete Recipe</Button></a>
+            <Button className='recipe-view-button' variant="outline-warning" onClick={() => navigate(-1)}>Go Back</Button>
         </div>
     )
 }
