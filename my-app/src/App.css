@@ -37,36 +37,107 @@
   }
 }
 
-/* Recipe view page*/
+/* Recipes index page */
 .Recipes-view-page {
-  display: flex;
-  flex-direction: row;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+gap: 80px;
 
+}
+
+.recipes-detail-block {
+  border-color: black 5px;
+box-sizing: content-box;
+width: 300px;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: larger;
+  color: #f3ac83;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 5px solid;
+  margin: 50px;
+}
+
+.recipes-detail-title {
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.recipes-details-pic {
+max-width: 150px;
+max-height: 200px;
+padding: 10px;
+}
+
+/* Recipe view page*/
+.Recipe-view-page {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.recipe-view-details {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: larger;
+  color: #f3ac83;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 5px solid;
+  margin: 25px;
+}
+
+.recipe-view-name {
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.recipe-view-img {
+  max-width: 350px;
+  padding: 10px;
+}
+
+.recipe-view-instructions {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  text-align: left;
+  padding: 10px;
+  border: #f3ac83 solid;
+}
+
+.recipe-view-button {
+  display: inline;
+  margin: 10px;
 }
 
 /* Recipe update page */
 
 .updateRecipe-container {
-  width: 100%;
-    min-height: 100vh;
-    display: block;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 960px;
-    padding: 15px;
-    background: silver;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: larger;
+  color: #f3ac83;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 5px solid;
+  margin: 50px;
 }
 
 .updaterecipe-title {
 display: inline-block;
 margin: 20px;
 }
+.update-hr {
+  border: 5px solid orange;
+  width: 100px;
+  margin: auto;
+  border-radius: 5px;
+}
 
 .update-form {
   width: 50%;
   margin-right: auto;
   margin-left: auto;
-  background-color: beige;
+  
 }
 /* update input name */
 .update-input-name {
@@ -222,4 +293,22 @@ border-radius: 10px;
 
 .button{
   margin: 36px;
+}
+
+/* about page  */
+
+.about-container {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: larger;
+  color: #f3ac83;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 5px solid;
+  margin: 50px;
+}
+
+.about-discription {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -58,25 +58,28 @@ const navigateBack = () => {
 
     return (
         <div className='updateRecipe-container'>
-          <span className='updaterecipe-title'>Create Recipe</span>
+          <span className='updaterecipe-title'>Edit Your Recipe</span>
+          <hr className='update-hr'></hr>
         <Form className='update-form'>
-      <div className="update-input-name" >
-      <Form.Label className='update-input-title' >Recipe Name</Form.Label>
+      <div className="form-group" >
+      <Form.Label  >Recipe Name</Form.Label>
         <input onChange={handleChange} name="name" value={recipe.name} className="form-control" placeholder='Recipe Name' />
       </div>
-      <div className="update-input-pic" >
-        <Form.Label className='update-input-title' > Recipe Picture</Form.Label>
+      <div className="row">
+      <div className="form-group col-sm-6" >
+        <Form.Label  > Recipe Picture</Form.Label>
         <input onChange={handleChange} name="pic" value={recipe.pic} className="form-control" placeholder='valid recipe pic URL' />
       </div>
-      <div className="update-input-type" >
-      <Form.Label className='update-input-title'> Recipe type</Form.Label>
+      <div className="form-group col-sm-6" >
+      <Form.Label > Recipe type</Form.Label>
         <input onChange={handleChange} name="type" value={recipe.type} className="form-control" placeholder='Type' />
       </div>
-      <div className="update-input-instructions" >
-      <Form.Label className='update-input-title' > Recipe instructions</Form.Label>
+      </div>
+      <div className="form-group" >
+      <Form.Label > Recipe instructions</Form.Label>
       <Form.Control as="textarea" rows={7} onChange={handleChange} name="instructions" value={recipe.instructions} placeholder='Recipe Instructions'/>
       </div>
-      <Button onClick={handleClick} className="submit-form-button" variant="primary" type="submit">Submit Recipe</Button>
+      <Button onClick={handleClick} className="button" variant="outline-warning" type="submit">Submit Recipe</Button>
         </Form>
         </div>
     );
