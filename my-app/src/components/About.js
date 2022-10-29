@@ -13,6 +13,8 @@ function About() {
             </div>
             <Button className='recipe-view-button' variant="outline-warning" onClick={() => navigate(-1)}>Go Back</Button>
             
+
+            <h1>About Us</h1>
         </div>
     )
 }

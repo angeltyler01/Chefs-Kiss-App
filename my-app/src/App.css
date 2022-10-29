@@ -240,18 +240,39 @@ border-radius: 10px;
 /* Home page */
 
 .home-page{
- 
+ font-family: 'Times New Roman', Times, serif;
+}
+
+
+.btn-primary{
+  font-size: 30px;
+  padding: 15px 25px;
+  color:#E6986A;
+  border-color: #E6986A;
+  border-width: 5px;
+  position: absolute;
+  z-index: 1;
+  left: 625px;
+  margin-top: 300px;
+  background-color: rgb(230, 230, 216);
+}
+
+.breakfast-img{
+  z-index: -1;
+  width: 1510px;
+  border: 15px solid #f2daab
 }
 
 /* Create Page */
 
 .create-Recipe-page{
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Times, 'Times New Roman', serif;
   font-size: larger;
   color: #f3ac83;
   padding-left: 30px;
   padding-right: 30px;
   border: 5px solid;
+  border-radius: 15px;
   margin: 50px;
 }
 
